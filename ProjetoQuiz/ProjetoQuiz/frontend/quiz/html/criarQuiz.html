@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Criar Quiz</title>
+    <script src="../js/criarQuiz.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+
+        .pergunta {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 15px;
+            padding-right: 25px;
+
+        }
+
+        .escolhas {
+            margin-top: 8px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Criar Quiz</h1>
+
+    <form id="quizForm">
+        <div class="pergunta">
+            <label for="titulo">Título do Quiz:</label>
+            <input type="text" id="titulo" name="titulo" required />
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="2" required></textarea>
+            <label for="tema">Tema:</label>
+            <select id="tema" name="tema" required>
+                <option value="" disabled selected>Selecione um tema</option>
+                <option value="historia">História</option>
+                <option value="ciencia">Ciência</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="esportes">Esportes</option>
+                <option value="geral">Geral</option>
+            </select>
+        </div>
+
+        <div id="perguntasContainer"></div>
+
+        <button type="button" id="adicionarPerguntaBtn">Adicionar Pergunta</button>
+        <br />
+        <button type="submit">Enviar Quiz</button>
+    </form>
+</body>
+
+</html>
